@@ -6,6 +6,8 @@ It is based on the <a href="https://github.com/hyperledger/fabric-samples" targe
 
 The idea is to showcase how to migrate your mental concepts from Go development to TypeScript based Convector smart contracts.
 
+<img src="./images/migration.png">
+
 ## Prerequisites
 
 - <a href="https://medium.com/r/?url=https%3A%2F%2Fwww.docker.com%2Fcommunity-edition" target="_blank">Docker</a>
