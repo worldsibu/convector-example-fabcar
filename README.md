@@ -20,12 +20,12 @@ npm i
 # Wake yourself up a dev blockchain
 npm run env:restart
 # Now install the chaincode!
-npm run cc:install
+npm run cc:start -- car 1
 ```
 
 ## How it was done
 
-As simple as the example looks like, getting around all the Go code may be confusing, so we made it even easier with the framework's CLI.
+As simple as the example looks like, getting around all the Go code may be confusing, so we made it even easier with the framework's CLI. 
 
 ```bash
 # In case you don't have Convector-CLI installed already
@@ -36,6 +36,10 @@ npm i
 ```
 
 Modify the default `./packages/car-cc/src/car.model.ts.` and `./packages/car-cc/src/car.controller.ts.`, refer to **Run this project** section.
+
+### Learn how to make it from scratch
+
+<a href="https://hackernoon.com/hyperledger-fabric-convector-convector-cli-javascript-only-f4a0919b11c1" target="_blank">A tutorial here.</a>
 
 ## Original code
 
