@@ -1,6 +1,7 @@
 import ExamplesService from '../../services/examples.service';
 import { Request, Response } from 'express';
 import { CarController } from '../../../smartContractControllers';
+import { Models } from '../../../smartContractModels';
 
 export class Controller {
   async all(req: Request, res: Response): Promise<void> {
@@ -21,13 +22,19 @@ export class Controller {
   }
 
   async create(req: Request, res: Response) {
-    console.log('test init');
-    let cntrl = await CarController.init();
-    console.log('init worked');
-    let itemToCreate = req.body;
-    await cntrl.create(itemToCreate);
+    try {
+      let cntrl = await CarController.init();
+      let carRaw = req.body;
+      carRaw.type = 'io.worldsibu.car';
+      console.log('car', carRaw);
+      let car = new Models.Car(carRaw);
+      await cntrl.create(car);
 
-    res.send(201);
+      res.send(201);
+    } catch (ex) {
+      console.log(ex.message, ex.stack);
+      res.status(500).send(ex);
+    }
   }
 }
 export default new Controller();

@@ -16,16 +16,16 @@ var CarController = (function (_super) {
                 switch (_a.label) {
                     case 0:
                         mockData = [
-                            new car_model_1.Car('1').init('Toyota', 'Prius', 'blue', 'Tomoko'),
-                            new car_model_1.Car('2').init('Ford', 'Mustang', 'red', 'Brad'),
-                            new car_model_1.Car('3').init('Hyundai', 'Tucson', 'green', 'Jin Soo'),
-                            new car_model_1.Car('4').init('Volkswagen', 'Passat', 'yellow', 'Max'),
-                            new car_model_1.Car('5').init('Tesla', 'S', 'black', 'Adriana'),
-                            new car_model_1.Car('6').init('Peugeot', '205', 'purple', 'Michel'),
-                            new car_model_1.Car('7').init('Chery', 'S22L', 'white', 'Aarav'),
-                            new car_model_1.Car('8').init('Fiat', 'Punto', 'violet', 'Pari'),
-                            new car_model_1.Car('9').init('Tata', 'Nano', 'indigo', 'Valeria'),
-                            new car_model_1.Car('10').init('Holden', 'Barina', 'brown', 'Shotaro')
+                            new car_model_1.Car({ id: '1', make: 'Toyota', model: 'Prius', colour: 'blue', owner: 'Tomoko' }),
+                            new car_model_1.Car({ id: '2', make: 'Ford', model: 'Mustang', colour: 'red', owner: 'Brad' }),
+                            new car_model_1.Car({ id: '3', make: 'Hyundai', model: 'Tucson', colour: 'green', owner: 'Jin Soo' }),
+                            new car_model_1.Car({ id: '4', make: 'Volkswagen', model: 'Passat', colour: 'yellow', owner: 'Max' }),
+                            new car_model_1.Car({ id: '5', make: 'Tesla', model: 'S', colour: 'black', owner: 'Adriana' }),
+                            new car_model_1.Car({ id: '6', make: 'Peugeot', model: '205', colour: 'purple', owner: 'Michel' }),
+                            new car_model_1.Car({ id: '7', make: 'Chery', model: 'S22L', colour: 'white', owner: 'Aarav' }),
+                            new car_model_1.Car({ id: '8', make: 'Fiat', model: 'Punto', colour: 'violet', owner: 'Pari' }),
+                            new car_model_1.Car({ id: '9', make: 'Tata', model: 'Nano', colour: 'indigo', owner: 'Valeria' }),
+                            new car_model_1.Car({ id: '10', make: 'Holden', model: 'Barina', colour: 'brown', owner: 'Shotaro' })
                         ];
                         return [4, Promise.all(mockData.map(function (car) { return car.save(); }))];
                     case 1:

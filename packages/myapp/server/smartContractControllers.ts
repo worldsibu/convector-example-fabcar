@@ -6,9 +6,7 @@ import { FabricControllerAdapter } from '@worldsibu/convector-adapter-fabric';
 export namespace CarController {
     export async function init(): Promise<CarControllerClient> {
         const user = process.env.USERCERT || 'user1';
-
         await SelfGenContext.getClient();
-
         // Inject a Adapter of type *Fabric Controller*
         // Setup accordingly to the
         const adapter = new FabricControllerAdapter({
@@ -18,14 +16,9 @@ export namespace CarController {
             chaincode: process.env.CHAINCODE,
             keyStore: resolve(__dirname, process.env.KEYSTORE),
             networkProfile: resolve(__dirname, process.env.NETWORKPROFILE),
-            userMspPath: process.env.KEYSTORE
+            userMspPath: resolve(__dirname, process.env.KEYSTORE),
         });
-
-        console.log(adapter);
-
-        console.log('about to init');
         await adapter.init();
-
         // Return your own implementation of the controller
         return new CarControllerClient(adapter);
     }
