@@ -16,7 +16,8 @@ The idea is to showcase how to migrate your mental concepts from Go development 
 ## Run this project
 
 ```bash
-npm i
+# Compile everything
+npx lerna bootstrap
 # Wake yourself up a dev blockchain
 npm run env:restart
 # Now install the chaincode!
@@ -26,8 +27,6 @@ npm run cc:start -- car 1
 There is also included a NodeJS backend to make a few REST endpoints available.
 
 ```bash
-# Compile everything
-npx lerna bootstrap
 # Start the backend
 npx lerna run dev:debug --scope myapp --stream
 ```
