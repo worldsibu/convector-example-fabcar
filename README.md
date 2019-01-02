@@ -49,7 +49,7 @@ Body
 
 ## How it was done - Smart Contract
 
-As simple as the example looks like, getting around all the Go code may be confusing, so we made it even easier with the framework's CLI.
+As simple as the example looks like, getting around all the Go code may be confusing, so we made it even easier with the framework's CLI. 
 
 ```bash
 # In case you don't have Convector-CLI installed already
