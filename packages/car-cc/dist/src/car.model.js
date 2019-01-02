@@ -10,13 +10,6 @@ var Car = (function (_super) {
         _this.type = 'io.worldsibu.car';
         return _this;
     }
-    Car.prototype.init = function (make, model, colour, owner) {
-        this.make = make;
-        this.model = model;
-        this.colour = colour;
-        this.owner = owner;
-        return this;
-    };
     tslib_1.__decorate([
         convector_core_model_1.ReadOnly(), convector_core_model_1.Required()
     ], Car.prototype, "type", void 0);
