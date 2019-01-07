@@ -43,8 +43,10 @@ export class CarController extends ConvectorController {
   }
 
   @Invokable()
-  public async changeOwner(@Param(yup.string()) id: string) {
+  public async changeOwner(@Param(yup.string()) id: string,
+                           @Param(yup.string()) owner: string) {
     let car = await Car.getOne(id);
-    await car.save();
+    car.owner = owner;
+    return car.save();
   }
 }
